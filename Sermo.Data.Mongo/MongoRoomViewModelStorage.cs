@@ -32,6 +32,7 @@ namespace Sermo.Data.Mongo
         }
 
         public IEnumerable<MessageViewModel> GetRoomMessages(int roomID)
+        // Changes Sprint 2 -- I want to serve hundreds of users concurrently-- Tyler Scouton
         {
             var messageQuery = Query<MessageViewModel>.EQ(viewModel => viewModel.RoomID, roomID);
             var messagesCollection = GetMessagesCollection();
@@ -45,6 +46,7 @@ namespace Sermo.Data.Mongo
         }
 
         private MongoCollection<MessageViewModel> GetMessagesCollection()
+        // Changes Sprint 2 -- I want to serve hundreds of users concurrently-- Tyler Scouton
         {
             var database = GetDatabase();
             var messagesCollection = database.GetCollection<MessageViewModel>(MessagesCollection);

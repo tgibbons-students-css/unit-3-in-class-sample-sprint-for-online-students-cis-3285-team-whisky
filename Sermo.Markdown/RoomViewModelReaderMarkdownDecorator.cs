@@ -10,6 +10,7 @@ namespace Sermo.Markdown
 {
     using Markdown=MarkdownDeep.Markdown;
 
+
     public class RoomViewModelReaderMarkdownDecorator : IRoomViewModelReader
     {
         public RoomViewModelReaderMarkdownDecorator(IRoomViewModelReader @delegate, Markdown markdown)
@@ -24,6 +25,7 @@ namespace Sermo.Markdown
         }
 
         public IEnumerable<MessageViewModel> GetRoomMessages(int roomID)
+        // Changes Sprint 2 -- I want to send markdown that will be correctly formatted -- Tyler Scouton
         {
             var roomMessages = @delegate.GetRoomMessages(roomID);
 
