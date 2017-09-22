@@ -23,8 +23,9 @@ namespace Sermo.Data.AdoNet
         }
 
         public void CreateRoom(string name)
+        // Changes for Sprint 1 -- I want to create rooms for categorizing conventions -- Andre Burgoyne
         {
-            using(var connection = databaseFactory.CreateConnection())
+            using (var connection = databaseFactory.CreateConnection())
             {
                 connection.ConnectionString = applicationSettings.GetValue("SermoConnectionString");
                 connection.Open();
