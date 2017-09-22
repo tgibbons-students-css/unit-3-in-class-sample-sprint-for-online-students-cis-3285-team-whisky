@@ -48,6 +48,7 @@ namespace Sermo.Data.AdoNet
         }
 
         public IEnumerable<RoomRecord> GetAllRooms()
+        // Changes for Sprint 1 -- I want to create rooms for categorizing conventions -- Andre Burgoyne
         {
             var allRooms = new List<RoomRecord>();
 
