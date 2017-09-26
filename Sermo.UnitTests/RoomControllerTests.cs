@@ -39,6 +39,8 @@ namespace Sermo.UnitTests
 
         [Test]
         public void GetCreateRendersView()
+        //I want to create rooms for categorizing conversations- Amelia Schumacher
+
         {
             var controller = CreateController();
 
